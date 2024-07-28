@@ -33,7 +33,7 @@ class IngredientQuantity(models.Model):
 class Recipe(models.Model):
     title = models.CharField(max_length=250)
     ingredients = models.ManyToManyField(IngredientQuantity, blank=True)
-    Dietary_Restrictions = models.ManyToManyField(DietaryRestriction, blank=True)
+    dietary_restrictions = models.ManyToManyField(DietaryRestriction, blank=True)
 
     def __str__(self):
         return self.title

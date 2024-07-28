@@ -1,15 +1,13 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
+from .models import Recipe
+from .serializers import RecipeSerializer
 
 # Create your views here.
 # request -> response 
 # request handler
 # action
-def calculate():
-    x = 1
-    y = 2
-    return x
-def say_hello(request):
-    x = calculate()
-    y = 2
-    return render(request, 'hello.html',{ 'name': 'Alex'} )
+
+class RecipeViewSet(viewsets.ModelViewSet):
+    queryset = Recipe.objects.all()
+    serializer_class = RecipeSerializer
+

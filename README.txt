@@ -29,3 +29,10 @@
 
 - python manage.py runserver
 
+# edit the models.py file and make sure to call the components created in admin.py 
+# any changes made to either file, make sure to create migrations, migrate them, then runserver
+
+- python manage.py makemigrations 
+- python manage.py migrate 
+- python manage.py runserver
+
