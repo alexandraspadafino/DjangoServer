@@ -8,6 +8,10 @@
 
 - pip install --upgrade pip
 
+# Now you are in your environment, install all dependencies and versions defined in requirements.txt file 
+
+- pip install -r requirements.txt
+
 # Then, you are going to create the directory in which you store your project 
 
 - mkdir {project}
